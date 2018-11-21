@@ -72,6 +72,30 @@ class BasicExample  extends Component {
     }
 }
 
+class Quote  extends Component {
+    constructor() {
+        super();
+        this.state = {count: 0};
+    }
+    render(){
+        return (
+            <div id="quote-box">
+                <div id="text">
+
+                </div>
+                <div id="author">
+
+                </div>
+                <a id="new-quote" href="javascript:;" onClick={}>
+
+                </a>
+                <a id="tweet-quote" href="twitter.com/intent/tweet">
+
+                </a>
+            </div>
+        )
+    }
+}
 ReactDOM.render(
     <BasicExample/>,
     document.getElementById('root')
