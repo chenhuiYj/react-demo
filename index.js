@@ -21,21 +21,20 @@ const Tabs = ({ match }) => (
 
 const Other = ({ match }) => (
     <div>
-        <span>{JSON.stringify(match)}</span>
         <h2>选项列表</h2>
         <ul>
             <li>
-                <Link to={`${match.url}/1`}>
+                <Link to={`${match.url}/状态`}>
                     状态
                 </Link>
             </li>
             <li>
-                <Link to={`${match.url}/2`}>
+                <Link to={`${match.url}/组件`}>
                     组件
                 </Link>
             </li>
             <li>
-                <Link to={`${match.url}/3`}>
+                <Link to={`${match.url}/生命周期`}>
                     生命周期
                 </Link>
             </li>
