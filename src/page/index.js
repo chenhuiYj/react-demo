@@ -1,6 +1,6 @@
 import React , {Component} from 'react'
 import ReactDOM from 'react-dom';
-import App from './src/page/app';
+import App from './app';
 import {
     HashRouter as Router,
     Route,
