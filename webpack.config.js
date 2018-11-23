@@ -4,7 +4,7 @@ let glob = require('glob');
 let serverHost = getIPAdress();
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 //通过getEntry函数获取所有js脚本
-let jsEntries = getEntry('./src/page/*.js');
+let jsEntries = getEntry('./src/js/page/*.js');
 let publicPath = '/dist/';
 let config = {
     entry:jsEntries,
