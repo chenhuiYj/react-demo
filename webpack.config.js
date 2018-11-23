@@ -36,6 +36,10 @@ let config = {
                 loader: 'style-loader!css-loader'
             },
             {
+                test: /\.scss$/,
+                loader: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: "babel-loader",
@@ -43,10 +47,6 @@ let config = {
                     presets: ["es2015","stage-1",'react'],
                     plugins: ["transform-decorators-legacy"]
                 }
-            },
-            {
-                test: /\.scss$/,
-                loader: 'style-loader!css-loader!sass-loader'
             }
         ]
     },
