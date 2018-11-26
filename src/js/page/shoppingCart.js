@@ -17,7 +17,7 @@ class ShoppingCart extends Component {
                     'pro_min': "215千克",//最小起订量
                     'pro_depot': '上海仓海仓储',//所在仓库
                     'pro_num': 3,//数量
-                    'pro_img': '../../images/ucenter/testimg.jpg',//图片链接
+                    'pro_img': '../../images/testimg.jpg',//图片链接
                     'pro_price': 800//单价
                 },
                 {
@@ -29,7 +29,7 @@ class ShoppingCart extends Component {
                     'pro_min': "215千克",
                     'pro_depot': '上海仓海仓储',
                     'pro_num': 3,
-                    'pro_img': '../../images/ucenter/testimg.jpg',
+                    'pro_img': '../../images/testimg.jpg',
                     'pro_price': 800
                 }
             ]
