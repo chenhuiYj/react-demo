@@ -53,7 +53,6 @@ class ShoppingCart extends Component {
                                             <p>规格/纯度:{item.pro_purity}&nbsp;&nbsp;起定量：{item.pro_min}</p>
                                             <p>配送仓储：{item.pro_depot}</p>
                                         </div>
-                                        <div className="clearfix"></div>
                                     </td>
                                     <td className="td-num">
                                         <div className="product-num">
