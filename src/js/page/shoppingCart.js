@@ -39,8 +39,6 @@ class ShoppingCart extends Component {
     }
 
     countProduct() {
-        this.state.sumPrice = 0;
-        this.state.countProduct = 0;
         let _sumPrice = 0, _countProduct = 0;
         this.state.shoppingList.forEach(item => {
             if (item.select) {
