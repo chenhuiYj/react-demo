@@ -41,11 +41,11 @@ class ShoppingCart extends Component {
     countProduct() {
         this.state.sumPrice = 0;
         this.state.countProduct = 0;
-        let _sumPrice=0,_countProduct=0;
-        this.state.shoppingList.forEach(item=>{
-            if(item.select){
+        let _sumPrice = 0, _countProduct = 0;
+        this.state.shoppingList.forEach(item => {
+            if (item.select) {
                 _countProduct++;
-                _sumPrice+=item.pro_num*item.pro_price;
+                _sumPrice += item.pro_num * item.pro_price;
             }
         });
         this.setState({
@@ -54,36 +54,42 @@ class ShoppingCart extends Component {
         });
     }
 
-    changeSelect(index){
-        let _list=JSON.parse(JSON.stringify(this.state.shoppingList));
-        _list[index].select=!_list[index].select;
+    changeSelect(index) {
+        let _list = JSON.parse(JSON.stringify(this.state.shoppingList));
+        _list[index].select = !_list[index].select;
         this.setState({
             shoppingList: _list
-        },()=>{this.countProduct();});
+        }, () => {
+            this.countProduct();
+        });
     }
 
     deleteProduct(index) {
-        let _list =[];
-        if(index.constructor===Number){
-            _list=JSON.parse(JSON.stringify(this.state.shoppingList));
+        let _list = [];
+        if (index.constructor === Number) {
+            _list = JSON.parse(JSON.stringify(this.state.shoppingList));
             _list.splice(index, 1);
         }
-        else{
-            _list=this.state.shoppingList.filter(item=> !item.select);
+        else {
+            _list = this.state.shoppingList.filter(item => !item.select);
         }
         this.setState({
             shoppingList: _list
-        },()=>{this.countProduct();});
+        }, () => {
+            this.countProduct();
+        });
     }
 
     componentWillMount() {
         let _list = JSON.parse(JSON.stringify(this.state.shoppingList));
-        _list.forEach(item=>{
-            item.select=true;
+        _list.forEach(item => {
+            item.select = true;
         })
         this.setState({
             shoppingList: _list
-        },()=>{this.countProduct();});
+        }, () => {
+            this.countProduct();
+        });
     }
 
     render() {
@@ -95,7 +101,10 @@ class ShoppingCart extends Component {
                         this.state.shoppingList.map((item, index) => {
                             return (
                                 <tr key={item.pro_id}>
-                                    <td className="td-check"><span className={`check-span ${item.select ? "check-true" : ""}`} onClick={()=>{this.changeSelect(index)}}></span></td>
+                                    <td className="td-check"><span
+                                        className={`check-span ${item.select ? "check-true" : ""}`} onClick={() => {
+                                        this.changeSelect(index)
+                                    }}></span></td>
                                     <td className="td-product"><img src={item.pro_img} width="98" height="98"/>
                                         <div className="product-info">
                                             <h6>{item.pro_name}</h6>
@@ -122,7 +131,9 @@ class ShoppingCart extends Component {
                                         <p className="red-text">￥<span
                                             className="total-text">{item.pro_price * item.pro_num}</span>.00</p>
                                     </td>
-                                    <td className="td-do" onClick={()=>{this.deleteProduct(index)}}><a href="javascript:;" className="product-delect">删除</a>
+                                    <td className="td-do" onClick={() => {
+                                        this.deleteProduct(index)
+                                    }}><a href="javascript:;" className="product-delect">删除</a>
                                     </td>
                                 </tr>
                             )
@@ -131,7 +142,8 @@ class ShoppingCart extends Component {
                     </tbody>
                 </table>
                 <div className="cart-product-info">
-                    <a className="delect-product" href="javascript:;" onClick={this.deleteProduct.bind(this)}><span></span>删除所选商品</a>
+                    <a className="delect-product" href="javascript:;"
+                       onClick={this.deleteProduct.bind(this)}><span></span>删除所选商品</a>
                     <a className="keep-shopping" href="#"><span></span>继续购物</a>
                     <a className="btn-buy fr" href="javascript:;">去结算</a>
                     <p className="fr product-total">￥<span>{this.state.sumPrice}</span></p>
