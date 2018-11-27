@@ -58,27 +58,38 @@ class ShoppingCart extends Component {
                                         <div className="product-num">
                                             <a href="javascript:;" className="num-reduce num-do fl" onClick={() => {
                                             }}><span></span></a>
-                                            <input type="text" className="num-input" v-model="item.pro_num"/>
+                                            <input type="text" className="num-input" value={item.pro_num}/>
                                             <a href="javascript:;" className="num-add num-do fr" onClick={() => {
                                             }}><span></span></a>
                                         </div>
                                     </td>
                                     <td className="td-price">
-                                        <p className="red-text">￥<span className="price-text">{item.pro_price}</span>
+                                        <p className="red-text">￥<span
+                                            className="price-text">{item.pro_price}</span>
                                         </p>
                                     </td>
                                     <td className="td-total">
                                         <p className="red-text">￥<span
                                             className="total-text">{item.pro_price * item.pro_num}</span>.00</p>
                                     </td>
-                                    <td className="td-do"><a href="javascript:;" className="product-delect">删除</a></td>
+                                    <td className="td-do"><a href="javascript:;" className="product-delect">删除</a>
+                                    </td>
                                 </tr>
                             )
                         })
                     }
                     </tbody>
                 </table>
+                <div class="cart-product-info">
+                    <a class="delect-product" href="javascript:;"><span></span>删除所选商品</a>
+                    <a class="keep-shopping" href="#"><span></span>继续购物</a>
+                    <a class="btn-buy fr" href="javascript:;">去结算</a>
+                    <p class="fr product-total">￥<span>1600</span></p>
+                    <p class="fr check-num"><span>2</span>件商品总计（不含运费）：</p>
+                </div>
             </div>
+
+
         )
     }
 }
