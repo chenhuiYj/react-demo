@@ -9,7 +9,7 @@ class ShoppingCart extends Component {
         this.state = {
             shoppingList: [
                 {
-                    'pro_id': '',
+                    'pro_id': 1,
                     'pro_name': '【斯文】甘油 | 丙三醇',//产品名称
                     'pro_brand': 'skc',//品牌名称
                     'pro_place': '韩国',//产地
@@ -21,7 +21,7 @@ class ShoppingCart extends Component {
                     'pro_price': 800//单价
                 },
                 {
-                    'pro_id': '',
+                    'pro_id': 2,
                     'pro_name': '【斯文】甘油 | 丙三醇',
                     'pro_brand': 'skc',
                     'pro_place': '韩国',
