@@ -3,6 +3,16 @@
 
 使用方式
 
-$ npm install
+    $ npm install
+
+    $ npm run dev
 
 浏览器输入  本机ip:9099/dist/html/index.html#/
+
+目录对应demo：
+
+index.html:首页路由跳转 demo
+
+todo.html：todoList demo
+
+shoppingCart.html:购物车 demo
