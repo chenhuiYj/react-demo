@@ -37,6 +37,7 @@ class ShoppingCart extends Component {
             ]
         };
     }
+
     /**
      * @description 统计产品数量和总价
      */
@@ -53,6 +54,7 @@ class ShoppingCart extends Component {
             countProduct: _countProduct
         });
     }
+
     /**
      * @description 改变产品选择状态
      */
@@ -65,6 +67,7 @@ class ShoppingCart extends Component {
             this.countProduct();
         });
     }
+
     /**
      * @description 删除产品
      */
@@ -83,27 +86,29 @@ class ShoppingCart extends Component {
             this.countProduct();
         });
     }
+
     /**
      * @description 监听输入框统计产品数量
      */
-    handleChange(e){
-        let _list=this.state.shoppingList;
-        _list[e.target.dataset.index].pro_num=e.target.value;
+    handleChange(e) {
+        let _list = this.state.shoppingList;
+        _list[e.target.dataset.index].pro_num = e.target.value;
         this.setState({
             shoppingList: _list
         }, () => {
             this.countProduct();
         });
     }
+
     /**
      * @description 改变框统计产品数量
      */
-    changeNum(index,type){
-        let _list=this.state.shoppingList;
-        if(type){
+    changeNum(index, type) {
+        let _list = this.state.shoppingList;
+        if (type) {
             _list[index].pro_num++;
         }
-        else{
+        else {
             _list[index].pro_num--;
         }
         this.setState({
@@ -134,11 +139,14 @@ class ShoppingCart extends Component {
                         this.state.shoppingList.map((item, index) => {
                             return (
                                 <tr key={item.pro_id}>
-                                    <td className="td-check"><span
-                                        className={`check-span ${item.select ? "check-true" : ""}`} onClick={() => {
-                                        this.changeSelect(index)
-                                    }}></span></td>
-                                    <td className="td-product"><img src={item.pro_img} width="98" height="98"/>
+                                    <td className="td-check">
+                                        <span
+                                            className={`check-span ${item.select ? "check-true" : ""}`} onClick={() => {
+                                            this.changeSelect(index)
+                                        }}></span>
+                                    </td>
+                                    <td className="td-product">
+                                        <img src={item.pro_img} width="98" height="98"/>
                                         <div className="product-info">
                                             <h6>{item.pro_name}</h6>
                                             <p>品牌：{item.pro_brand}&nbsp;&nbsp;产地：{item.pro_place}</p>
@@ -148,9 +156,14 @@ class ShoppingCart extends Component {
                                     </td>
                                     <td className="td-num">
                                         <div className="product-num">
-                                            <a href="javascript:;" className="num-reduce num-do fl" onClick={() => {this.changeNum(index)}}><span></span></a>
-                                            <input type="text" className="num-input" value={item.pro_num} data-index={index} onChange={this.handleChange.bind(this)}/>
-                                            <a href="javascript:;" className="num-add num-do fr" onClick={() => {this.changeNum(index,'add')}}><span></span></a>
+                                            <a href="javascript:;" className="num-reduce num-do fl" onClick={() => {
+                                                this.changeNum(index)
+                                            }}><span></span></a>
+                                            <input type="text" className="num-input" value={item.pro_num}
+                                                   data-index={index} onChange={this.handleChange.bind(this)}/>
+                                            <a href="javascript:;" className="num-add num-do fr" onClick={() => {
+                                                this.changeNum(index, 'add')
+                                            }}><span></span></a>
                                         </div>
                                     </td>
                                     <td className="td-price">
