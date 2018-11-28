@@ -37,7 +37,9 @@ class ShoppingCart extends Component {
             ]
         };
     }
-
+    /**
+     * @description 统计产品数量和总价
+     */
     countProduct() {
         let _sumPrice = 0, _countProduct = 0;
         this.state.shoppingList.forEach(item => {
@@ -51,7 +53,9 @@ class ShoppingCart extends Component {
             countProduct: _countProduct
         });
     }
-
+    /**
+     * @description 改变产品选择状态
+     */
     changeSelect(index) {
         let _list = JSON.parse(JSON.stringify(this.state.shoppingList));
         _list[index].select = !_list[index].select;
@@ -61,7 +65,9 @@ class ShoppingCart extends Component {
             this.countProduct();
         });
     }
-
+    /**
+     * @description 删除产品
+     */
     deleteProduct(index) {
         let _list = [];
         if (index.constructor === Number) {
@@ -77,6 +83,9 @@ class ShoppingCart extends Component {
             this.countProduct();
         });
     }
+    /**
+     * @description 监听输入框统计产品数量
+     */
     handleChange(e){
         let _list=this.state.shoppingList;
         _list[e.target.dataset.index].pro_num=e.target.value;
@@ -86,6 +95,9 @@ class ShoppingCart extends Component {
             this.countProduct();
         });
     }
+    /**
+     * @description 改变框统计产品数量
+     */
     changeNum(index,type){
         let _list=this.state.shoppingList;
         if(type){
