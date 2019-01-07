@@ -193,8 +193,6 @@ class ShoppingCart extends Component {
                     <p className="fr check-num"><span>{this.state.countProduct}</span>件商品总计（不含运费）：</p>
                 </div>
             </div>
-
-
         )
     }
 }
