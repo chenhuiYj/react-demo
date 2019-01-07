@@ -188,7 +188,6 @@ class ShoppingCart extends Component {
                 <div className="cart-product-info">
                     <a className="delect-product" href="javascript:;"
                        onClick={this.deleteProduct.bind(this)}><span></span>删除所选商品</a>
-                    {/*<a className="keep-shopping" href="#"><span></span>继续购物</a>*/}
                     <a className="btn-buy fr" href="javascript:;">去结算</a>
                     <p className="fr product-total">￥<span>{this.state.sumPrice}</span></p>
                     <p className="fr check-num"><span>{this.state.countProduct}</span>件商品总计（不含运费）：</p>
