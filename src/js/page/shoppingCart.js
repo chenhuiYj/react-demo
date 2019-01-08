@@ -156,14 +156,12 @@ class ShoppingCart extends Component {
                                     </td>
                                     <td className="td-num">
                                         <div className="product-num">
-                                            <a href="javascript:;" className="num-reduce num-do fl" onClick={() => {
-                                                this.changeNum(index)
-                                            }}><span></span></a>
+                                            <a href="javascript:;" className="num-reduce num-do fl" onClick={() => {this.changeNum(index)}}></a>
                                             <input type="text" className="num-input" value={item.pro_num}
                                                    data-index={index} onChange={this.handleChange.bind(this)}/>
                                             <a href="javascript:;" className="num-add num-do fr" onClick={() => {
                                                 this.changeNum(index, 'add')
-                                            }}><span></span></a>
+                                            }}></a>
                                         </div>
                                     </td>
                                     <td className="td-price">
@@ -186,8 +184,8 @@ class ShoppingCart extends Component {
                     </tbody>
                 </table>
                 <div className="cart-product-info">
-                    <a className="delect-product" href="javascript:;"
-                       onClick={this.deleteProduct.bind(this)}><span></span>删除所选商品</a>
+                    <a className="delete-product" href="javascript:;"
+                       onClick={this.deleteProduct.bind(this)}>删除所选商品</a>
                     <a className="btn-buy fr" href="javascript:;">去结算</a>
                     <p className="fr product-total">￥<span>{this.state.sumPrice}</span></p>
                     <p className="fr check-num"><span>{this.state.productNum}</span>件商品总计（不含运费）：</p>
