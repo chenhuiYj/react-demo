@@ -7,7 +7,7 @@
 
     $ npm run dev
 
-浏览器输入  本机ip:9099/dist/html/index.html#/
+浏览器输入  本机ip:9099/dist/html/
 
 目录对应demo：
 
