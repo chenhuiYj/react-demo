@@ -104,7 +104,7 @@ class ShoppingCart extends Component {
      * @description 改变框统计产品数量
      */
     changeNum(index, type) {
-        let _list = this.state.shoppingList;
+        let _list = JSON.parse(JSON.stringify(this.state.shoppingList));
         if (type) {
             _list[index].pro_num++;
         }
