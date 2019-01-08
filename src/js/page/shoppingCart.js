@@ -8,7 +8,7 @@ class ShoppingCart extends Component {
         super(props);
         this.state = {
             sumPrice: 0,
-            countProduct: 0,
+            productNum: 0,
             shoppingList: [
                 {
                     'pro_id': 1,
@@ -41,7 +41,7 @@ class ShoppingCart extends Component {
     /**
      * @description 统计产品数量和总价
      */
-    countProduct() {
+    handleCount() {
         let _sumPrice = 0, _countProduct = 0;
         this.state.shoppingList.forEach(item => {
             if (item.select) {
@@ -51,7 +51,7 @@ class ShoppingCart extends Component {
         });
         this.setState({
             sumPrice: _sumPrice,
-            countProduct: _countProduct
+            productNum: _countProduct
         });
     }
 
@@ -64,7 +64,7 @@ class ShoppingCart extends Component {
         this.setState({
             shoppingList: _list
         }, () => {
-            this.countProduct();
+            this.handleCount();
         });
     }
 
@@ -83,7 +83,7 @@ class ShoppingCart extends Component {
         this.setState({
             shoppingList: _list
         }, () => {
-            this.countProduct();
+            this.handleCount();
         });
     }
 
@@ -96,7 +96,7 @@ class ShoppingCart extends Component {
         this.setState({
             shoppingList: _list
         }, () => {
-            this.countProduct();
+            this.handleCount();
         });
     }
 
@@ -114,7 +114,7 @@ class ShoppingCart extends Component {
         this.setState({
             shoppingList: _list
         }, () => {
-            this.countProduct();
+            this.handleCount();
         });
     }
 
@@ -126,7 +126,7 @@ class ShoppingCart extends Component {
         this.setState({
             shoppingList: _list
         }, () => {
-            this.countProduct();
+            this.handleCount();
         });
     }
 
@@ -190,7 +190,7 @@ class ShoppingCart extends Component {
                        onClick={this.deleteProduct.bind(this)}><span></span>删除所选商品</a>
                     <a className="btn-buy fr" href="javascript:;">去结算</a>
                     <p className="fr product-total">￥<span>{this.state.sumPrice}</span></p>
-                    <p className="fr check-num"><span>{this.state.countProduct}</span>件商品总计（不含运费）：</p>
+                    <p className="fr check-num"><span>{this.state.productNum}</span>件商品总计（不含运费）：</p>
                 </div>
             </div>
         )
