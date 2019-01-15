@@ -22,9 +22,9 @@ class CommentInput extends Component {
     }
     render() {
         return (
-            <div>
-                <input placeholder="请输入评论" value={this.state.commentContent} onChange={this.handleBlur.bind(this)}/>
-                <button onClick={this.addComment.bind(this)}>提交</button>
+            <div className="m-comment-input">
+                <textarea placeholder="请输入评论" value={this.state.commentContent} onChange={this.handleBlur.bind(this)}/>
+                <button onClick={this.addComment.bind(this)}>提交评论</button>
             </div>
         )
     }
