@@ -11,7 +11,7 @@
 
 目录对应demo：
 
-index.html:首页路由跳转 demo
+index.html:路由跳转 demo
 
 todo.html：todoList demo
 
