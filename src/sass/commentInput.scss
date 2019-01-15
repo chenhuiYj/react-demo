@@ -1,5 +1,5 @@
-.m-comment-input{
-  textarea{
+.m-comment-input {
+  textarea {
     display: block;
     width: 400px;
     height: 100px;
@@ -11,7 +11,7 @@
     font-family: "微软雅黑";
     font-size: 16px;
   }
-  button{
+  button {
     width: 400px;
     height: 40px;
     box-sizing: border-box;
@@ -21,7 +21,7 @@
     background: #317ee7;
     color: #fff;
     cursor: pointer;
-    &:hover{
+    &:hover {
       opacity: .8;
     }
   }

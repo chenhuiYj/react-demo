@@ -1,12 +1,10 @@
-import {observable,action} from 'mobx'
+import {observable, action} from 'mobx'
 class Comment {
-    @observable commentList=[
+    @observable commentList = []
 
-    ]
-
-    @action addComment(obj){
+    @action addComment(obj) {
         this.commentList.push(obj)
     }
 }
-const comment=new Comment()
+const comment = new Comment()
 export default comment;
