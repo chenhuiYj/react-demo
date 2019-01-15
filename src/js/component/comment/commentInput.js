@@ -1,9 +1,31 @@
 import React, { Component } from 'react'
+import comment from '../../store/commentData'
 
 class CommentInput extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            id:0,
+            commentContent:''
+        };
+    }
+    handleBlur(e){
+        this.setState({
+            commentContent:e.target.value,
+        });
+    }
+    addComment(){
+        comment.addComment({'content':this.state.commentContent,'id':this.state.id++});
+        this.setState({
+            commentContent:'',
+        });
+    }
     render() {
         return (
-            <div>CommentInput</div>
+            <div>
+                <input placeholder="请输入评论" value={this.state.commentContent} onChange={this.handleBlur.bind(this)}/>
+                <button onClick={this.addComment.bind(this)}>提交</button>
+            </div>
         )
     }
 }
