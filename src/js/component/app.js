@@ -16,8 +16,6 @@ class App  extends Component {
         };
     }
     showAddComment(){
-        //let _isAddComment=!this.state.isAddComment;
-        //let _id=this.state.count++;
         let _this=this;
         this.setState({
             isAddComment:!_this.state.isAddComment
