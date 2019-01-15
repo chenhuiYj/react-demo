@@ -1,0 +1,28 @@
+.m-comment-input{
+  textarea{
+    display: block;
+    width: 400px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 10px;
+    line-height: 24px;
+    outline: none;
+    font-family: "微软雅黑";
+    font-size: 16px;
+  }
+  button{
+    width: 400px;
+    height: 40px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #317ee7;
+    color: #fff;
+    cursor: pointer;
+    &:hover{
+      opacity: .8;
+    }
+  }
+}

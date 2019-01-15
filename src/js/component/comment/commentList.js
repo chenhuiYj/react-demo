@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {observer} from 'mobx-react';
 import comment from '../../store/commentData'
+import '../../../sass/commentList.scss'
 
 @observer
 class CommentList extends Component {

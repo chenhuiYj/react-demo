@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import comment from '../../store/commentData'
-
+import '../../../sass/commentInput.scss'
 class CommentInput extends Component {
     constructor(props) {
         super(props);
