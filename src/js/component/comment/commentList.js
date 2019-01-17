@@ -8,7 +8,7 @@ class CommentList extends Component {
     render() {
         return (
             <div className="m-comment-list">
-                <h3>评论列表</h3>
+                {comment.commentList.length>0?<h3>评论列表</h3>:<p>暂无评论</p>}
                 {comment.commentList.map((item, index) => <div key={item.id}
                                                                className="m-comment-item">{index + 1}.{item.content}</div>)}
             </div>
