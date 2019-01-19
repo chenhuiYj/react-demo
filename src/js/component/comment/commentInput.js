@@ -10,13 +10,17 @@ class CommentInput extends Component {
             commentContent: ''
         };
     }
-
+    /**
+     * @description 失去焦点，改变commentContent
+     */
     handleBlur(e) {
         this.setState({
             commentContent: e.target.value,
         });
     }
-
+    /**
+     * @description 添加评论
+     */
     addComment() {
         comment.addComment({'content': this.state.commentContent, 'id': this.state.id++});
         this.setState({
