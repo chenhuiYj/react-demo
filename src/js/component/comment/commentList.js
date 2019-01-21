@@ -35,8 +35,10 @@ class CommentList extends Component {
      * @description 回复
      */
     switchApply(index) {
+        debugger;
         this.setState({
-            isApply: index
+            isApply: index,
+            applyContent: ''
         });
     }
     render() {
