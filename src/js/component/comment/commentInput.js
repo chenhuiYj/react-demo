@@ -22,7 +22,7 @@ class CommentInput extends Component {
      * @description 添加评论
      */
     addComment() {
-        comment.addComment({'content': this.state.commentContent, 'id': this.state.id++});
+        comment.addComment({'content': this.state.commentContent, 'id': this.state.id++,'apply':[]});
         this.setState({
             commentContent: '',
         });

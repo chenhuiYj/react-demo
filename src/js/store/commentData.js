@@ -2,6 +2,13 @@ import {observable, action} from 'mobx'
 class Comment {
     @observable commentList = []
     /**
+     * 添加评论
+     **/
+    @action addApply(index,con) {
+        this.commentList[index].apply.push(con)
+        console.log(this.commentList)
+    }
+    /**
     * 添加评论
     **/
     @action addComment(obj) {
