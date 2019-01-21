@@ -48,7 +48,7 @@ class CommentList extends Component {
                                                                className="m-comment-item"><p>{index + 1}.{item.content}</p>
                     {item.apply.length>0?<h4 style={{paddingLeft:'20px'}}>回复列表</h4>:''}
                     {item.apply.map(sub=><div key={sub.id}  style={{paddingLeft:'20px'}}>{sub.con}</div>)}
-                    {this.state.isApply===item.id?<div><input placeholder="请输入回复内容" value={this.state.applyContent} onChange={this.handleBlur.bind(this)}/><a href="javascript:;" onClick={()=>{this.submitApply(index)}} style={{marginRight:'10px'}}>确定</a><a href="javascript:;" onClick={()=>{this.switchApply(-1)}}>取消</a></div>:<a href="javascript:;" onClick={()=>{this.switchApply(index)}}>回复</a>}
+                    {this.state.isApply===item.id?<div><input placeholder="请输入回复内容" value={this.state.applyContent} onChange={this.handleBlur.bind(this)}/><a href="javascript:;" onClick={()=>{this.submitApply(index)}} style={{marginLeft:'10px'}}>确定</a><a href="javascript:;" onClick={()=>{this.switchApply(-1)}} style={{marginLeft:'10px'}}>取消</a></div>:<a href="javascript:;" onClick={()=>{this.switchApply(index)}} >回复</a>}
                     </div>)}
             </div>
         )
