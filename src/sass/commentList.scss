@@ -9,7 +9,24 @@
   .m-comment-item {
     border-bottom: 1px solid #ccc;
   }
-  .m-apply{
-
+  .m-apply {
+    input {
+      height: 40px;
+      padding-left: 10px;
+      width: 300px;
+      box-sizing: border-box;
+      vertical-align: top;
+    }
+    a {
+      vertical-align: top;
+      text-align: center;
+      display: inline-block;
+      color: #fff;
+      width: 80px;
+      height: 40px;
+      line-height: 40px;
+      background: #317ee7;
+      margin-left: 10px;
+    }
   }
 }
