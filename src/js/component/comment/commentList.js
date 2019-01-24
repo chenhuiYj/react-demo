@@ -29,8 +29,6 @@ class CommentList extends Component {
         }
         comment.addApply(i,obj);
     }
-
-
     /**
      * @description 回复
      */
