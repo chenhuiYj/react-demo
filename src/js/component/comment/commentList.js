@@ -12,12 +12,17 @@ class CommentList extends Component {
             isApply:-1
         };
     }
+    /**
+     * @description 获取输入框的值
+     */
     handleBlur(e){
         this.setState({
             applyContent: e.target.value,
         });
     }
-
+    /**
+     * @description 提交回复
+     */
     submitApply(i){
         this.setState({
             applyContent: '',
@@ -30,7 +35,7 @@ class CommentList extends Component {
         comment.addApply(i,obj);
     }
     /**
-     * @description 回复
+     * @description 切换回复框显示隐藏
      */
     switchApply(index) {
         this.setState({
