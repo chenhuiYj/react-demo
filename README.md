@@ -17,4 +17,4 @@ todo.html：todoList demo
 
 shoppingCart.html:购物车 demo
 
-comment.html:评论 demo
+comment.html:评论回复 demo
