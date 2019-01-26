@@ -2,7 +2,7 @@ import {observable, action} from 'mobx'
 class Comment {
     @observable commentList = []
     /**
-     * 添加评论
+     * 回复评论
      **/
     @action addApply(index,con) {
         this.commentList[index].apply.push(con)
