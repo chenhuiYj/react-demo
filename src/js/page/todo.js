@@ -9,7 +9,9 @@ class TodoList  extends Component {
         this.state = {
             isAddToDo:false,
             id:1,
-            todoList:[]
+            todoList:[],
+            updateIndex:-1,
+            updateInput:''
         };
     }
 
@@ -42,6 +44,25 @@ class TodoList  extends Component {
             todoList:_list
         });
     }
+    updateTodo(index){
+        this.setState({
+            updateIndex:index,
+            updateInput:this.state.todoList[index].content
+        });
+    }
+    handleUpdateTodo(e){
+        if(e.keyCode!==undefined&&e.keyCode!==13){
+            return;
+        }
+        let _list=JSON.parse(JSON.stringify(this.state.todoList));
+        _list[this.state.updateIndex].content=e.target.value;
+        this.setState({
+            todoList:_list,
+            updateIndex:-1,
+            updateInput:''
+        });
+        e.target.value="";
+    }
 
     render(){
         return (
@@ -51,7 +72,8 @@ class TodoList  extends Component {
                     {this.state.todoList.map((item,index)=> {
                         return (<li key={item.id}>
                             <span className={`u-icon-status ${item.status ? "yes" : "no"}`} onClick={()=>{this.switchStatus(index)}}/>
-                            {item.content}
+                            {this.state.updateIndex===index?<input className="u-input-update" defaultValue={this.state.updateInput} onKeyUp={(e)=>{this.handleUpdateTodo(e) }} onBlur={(e)=>{this.handleUpdateTodo(e) }} autoFocus/>:<span onClick={()=>{this.updateTodo(index)}}>{item.content}</span>}
+
                             <span className="u-icon-delete" onClick={()=>{this.deleteTodo(index)}}>删除</span>
                         </li>)
                     })}
