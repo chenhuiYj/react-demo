@@ -14,6 +14,9 @@ class TodoList  extends Component {
     }
 
     addTodo(e){
+        if(e.keyCode!==13){
+            return;
+        }
         this.state.id++;
         let _list=this.state.todoList;
         _list.push({
@@ -43,7 +46,7 @@ class TodoList  extends Component {
     render(){
         return (
             <div className="m-todo">
-                <input type="text" onBlur={this.addTodo.bind(this)} className="u-todo-input"/>
+                <input type="text" onKeyUp={(e)=>{this.addTodo(e)}} className="u-todo-input"/>
                 <ul>
                     {this.state.todoList.map((item,index)=> {
                         return (<li key={item.id}>
