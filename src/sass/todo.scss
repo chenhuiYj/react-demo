@@ -4,6 +4,7 @@
   li{
     font-size: 14px;
     line-height: 30px;
+    margin-bottom: 10px;
   }
 }
 .u-todo-input{
@@ -21,7 +22,8 @@
   margin-right: 10px;
   vertical-align: top;
   background: #ccc;
-  &.yes{
+  cursor: pointer;
+  &.yes,&:hover{
     background: #52ad52;
   }
 }
@@ -29,4 +31,7 @@
   float: right;
   cursor: pointer;
   color: #f00;
+  &:hover{
+    opacity: .8;
+  }
 }

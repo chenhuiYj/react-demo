@@ -46,7 +46,7 @@ class TodoList  extends Component {
     render(){
         return (
             <div className="m-todo">
-                <input type="text" onKeyUp={(e)=>{this.addTodo(e)}} className="u-todo-input"/>
+                <input type="text" placeholder="输入 todo ,回车确定" onKeyUp={(e)=>{this.addTodo(e)}} className="u-todo-input"/>
                 <ul>
                     {this.state.todoList.map((item,index)=> {
                         return (<li key={item.id}>
