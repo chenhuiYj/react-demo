@@ -15,7 +15,7 @@ class TodoList  extends Component {
         };
     }
     /**
-    * 添加todo
+    * @description 添加todo
     */
     addTodo(e){
         if(e.keyCode!==13){
@@ -33,7 +33,7 @@ class TodoList  extends Component {
         });
     }
     /**
-    * 切换编辑状态
+    * @description 切换编辑状态
     */
     switchStatus(index){
         let _list=this.state.todoList;
@@ -43,7 +43,7 @@ class TodoList  extends Component {
         });
     }
     /**
-    * 删除todo
+    * @description 删除todo
     */
     deleteTodo(index){
         let _list=this.state.todoList;
@@ -53,7 +53,7 @@ class TodoList  extends Component {
         });
     }
     /**
-    * 编辑todo
+    * @description 编辑todo
     */
     updateTodo(index){
         this.setState({
@@ -62,7 +62,7 @@ class TodoList  extends Component {
         });
     }
     /**
-    * 执行编辑todo
+    * @description 执行编辑todo
     */
     handleUpdateTodo(e){
         if(e.keyCode!==undefined&&e.keyCode!==13){
