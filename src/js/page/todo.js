@@ -14,7 +14,9 @@ class TodoList  extends Component {
             updateInput:''
         };
     }
-
+    /**
+    * 添加todo
+    */
     addTodo(e){
         if(e.keyCode!==13){
             return;
@@ -30,6 +32,9 @@ class TodoList  extends Component {
             todoList:_list
         });
     }
+    /**
+    * 切换编辑状态
+    */
     switchStatus(index){
         let _list=this.state.todoList;
         _list[index].status=!_list[index].status;
@@ -37,6 +42,9 @@ class TodoList  extends Component {
             todoList:_list
         });
     }
+    /**
+    * 删除todo
+    */
     deleteTodo(index){
         let _list=this.state.todoList;
         _list.splice(index,1);
@@ -44,12 +52,18 @@ class TodoList  extends Component {
             todoList:_list
         });
     }
+    /**
+    * 编辑todo
+    */
     updateTodo(index){
         this.setState({
             updateIndex:index,
             updateInput:this.state.todoList[index].content
         });
     }
+    /**
+    * 执行编辑todo
+    */
     handleUpdateTodo(e){
         if(e.keyCode!==undefined&&e.keyCode!==13){
             return;
