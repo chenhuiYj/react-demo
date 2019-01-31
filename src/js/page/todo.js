@@ -18,6 +18,7 @@ class TodoList  extends Component {
     * @description 添加todo
     */
     addTodo(e){
+        //如果按得不是回车键，不做任何处理
         if(e.keyCode!==13){
             return;
         }
