@@ -51,7 +51,7 @@ class CommentList extends Component {
                                                                className="m-comment-item"><p>{index + 1}.{item.content}</p>
                     {item.apply.length>0?<h4 className='u-apply-tips'>{item.apply.length}条回复</h4>:''}
                     {item.apply.map(sub=><div key={sub.id}  className='m-apply-list'>{sub.con}</div>)}
-                    {this.state.isApply===item.id?<div className="m-apply"><input placeholder="请输入回复内容" value={this.state.applyContent} onChange={this.handleBlur.bind(this)}/><a href="javascript:;" onClick={()=>{this.submitApply(index)}}>确定</a><a href="javascript:;" onClick={()=>{this.switchApply(-1)}}>取消</a></div>:<a href="javascript:;" className="u-btn-apply" onClick={()=>{this.switchApply(index)}} >回复</a>}
+                    {this.state.isApply===item.id?<div className="m-apply"><textarea placeholder="请输入回复内容" value={this.state.applyContent} onChange={this.handleBlur.bind(this)}/><a href="javascript:;" onClick={()=>{this.submitApply(index)}}>确定</a><a href="javascript:;" onClick={()=>{this.switchApply(-1)}}>取消</a></div>:<a href="javascript:;" className="u-btn-apply" onClick={()=>{this.switchApply(index)}} >回复</a>}
                     </div>)}
             </div>
         )

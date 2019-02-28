@@ -22,15 +22,18 @@
     color: #317ee7;
   }
   .m-apply {
-    input {
-      height: 40px;
+    textarea {
+      height: 100px;
       padding-left: 10px;
-      width: 300px;
+      width: 500px;
       box-sizing: border-box;
       vertical-align: top;
+      resize: none;
+      display: block;
+      font-family: "微软雅黑";
     }
     a {
-      vertical-align: top;
+      vertical-align: bottom;
       text-align: center;
       display: inline-block;
       color: #fff;
@@ -38,7 +41,7 @@
       height: 40px;
       line-height: 40px;
       background: #317ee7;
-      margin-left: 10px;
+      margin-right: 10px;
     }
   }
 }
